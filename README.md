@@ -1,4 +1,20 @@
-# EXM
+<p align="center">
+  <img src="docs/banner.svg" alt="EXM" width="100%">
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/chromium-MV3-34d399?style=for-the-badge&labelColor=0b0a24" alt="chromium">
+  <img src="https://img.shields.io/badge/stockfish-17.1-facc15?style=for-the-badge&labelColor=0b0a24" alt="stockfish">
+  <img src="https://img.shields.io/badge/runs-100%25%20local-22d3ee?style=for-the-badge&labelColor=0b0a24" alt="runs">
+  <a href="https://github.com/Vortexyyy/EXM/stargazers"><img src="https://img.shields.io/github/stars/Vortexyyy/EXM?style=for-the-badge&color=facc15&labelColor=0b0a24&logo=github" alt="Stars"></a>
+</p>
+
+<h3 align="center">A Chromium extension that reads the chess.com board and shows Stockfish's top 3 moves, locally.</h3>
+
+<p align="center"><b>⭐ Like it? <a href="https://github.com/Vortexyyy/EXM/stargazers">Drop a star</a>. It's free, takes a second, and helps others find it. ⭐</b></p>
+
+---
+
 
 Brave/Chromium MV3 extension for chess.com. Reads the board, runs Stockfish 17.1 (full NNUE, single-threaded WASM) locally, and shows the top 3 moves in a draggable panel with arrows drawn on the board.
 
