@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <style>
+      body { margin: 0; width: 270px; background: #15171c; color: #e8e8ea; font: 13px/1.4 "Segoe UI", system-ui, sans-serif; }
+      header { display: flex; align-items: baseline; gap: 8px; padding: 12px 14px; background: #1d2027; }
+      h1 { margin: 0; font-size: 18px; font-weight: 900; letter-spacing: 4px; color: #7cf29c; }
+      header span { color: #8a909a; font-size: 11px; }
+      main { padding: 8px 14px 14px; }
+      label.t { display: flex; justify-content: space-between; align-items: center; padding: 7px 0; cursor: pointer; }
+      input[type="checkbox"] { appearance: none; width: 34px; height: 18px; border-radius: 9px; background: #3a3e48; position: relative; cursor: pointer; transition: .15s; }
+      input[type="checkbox"]::after { content: ""; position: absolute; top: 2px; left: 2px; width: 14px; height: 14px; border-radius: 50%; background: #cfd2d8; transition: .15s; }
+      input[type="checkbox"]:checked { background: #2f9e57; }
+      input[type="checkbox"]:checked::after { left: 18px; background: #fff; }
+      .section { padding-top: 8px; border-top: 1px solid #2c2f38; margin-top: 6px; }
+      .section div { display: flex; justify-content: space-between; }
+      .section b { color: #7cf29c; }
+      input[type="range"] { width: 100%; accent-color: #7cf29c; }
+      small { color: #8a909a; display: block; margin-top: 4px; }
+    </style>
+  </head>
+  <body>
+    <header><h1>EXM</h1><span>Stockfish 17.1 · stealth</span></header>
+    <main>
+      <label class="t">Enabled <input type="checkbox" id="enabled" /></label>
+      <label class="t">Show panel <input type="checkbox" id="panelVisible" /></label>
+      <label class="t">Board arrows <input type="checkbox" id="arrows" /></label>
+      <label class="t">Only on my turn <input type="checkbox" id="onlyMyTurn" /></label>
+      
+      <div class="section">
+        <label class="t" style="padding:0">Humanize / Anti-detection <input type="checkbox" id="humanize" /></label>
+        <small>Injects plausible 2nd/3rd choices to keep CAPS/accuracy human (~85-92%)</small>
+      </div>
+
+      <div class="section" id="blunderGroup">
+        <div><span>Suboptimal move rate</span><b id="bv"></b></div>
+        <input type="range" id="blunderRate" min="5" max="50" step="5" />
+        <small id="bn"></small>
+      </div>
+
+      <div class="section">
+        <div><span>Search depth</span><b id="dv"></b></div>
+        <input type="range" id="depth" min="8" max="30" step="1" />
+        <small id="dn"></small>
+      </div>
+    </main>
+    <script src="popup.js"></script>
+  </body>
+</html>
